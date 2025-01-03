@@ -1,0 +1,1 @@
+This project is a heartfelt HTML-based book created for my special someone. It expresses my emotions and love through a creative and interactive design."
