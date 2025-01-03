@@ -1,62 +1,111 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.container {
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
     height: 100vh;
-    width: 100vw;
-    background: #9c03a74e;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    position: relative;
-    color: white;
-    background-image: white;
-}
-
-.tag {
-    height: 80px;
-    width: 435px;
-    background: linear-gradient(rgb(214, 8, 8), rgb(146, 4, 146));
-    border-radius: 10px;
-    color: #ffffff;
-    font-family: helvetica;
-    line-height: 80px;
     text-align: center;
-    font-weight: 900;
-    font-size: 50px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    margin-top: -50px;
-    box-shadow: 0 0 10px -3px #ffffff inset;
 }
 
-/*.tag:after {
-    content: "Bestfriend";
-  }
-  */
-.container .tag :hover {
-    color: rgb(131, 223, 130);
+/* Container Styling */
+.container {
+    width: 90%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
 }
 
-.ribbon {
-    width: 100%;
-    height: 20px;
-    background: rgb(255, 255, 255);
-    box-shadow: 0 0 10px -3px #333;
+/* Image Styling */
+.stylish-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    animation: bounce 2s infinite;
+}
+
+/* Text Message Styling */
+.message {
+    color: #fff;
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Tag/Button Styling */
+.tag {
+    display: inline-block;
+    background: linear-gradient(45deg, #ff7eb3, #ff758c);
+    padding: 15px 30px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tag:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
 .tag a {
-    color: rgb(239, 231, 13);
+    color: #fff;
     text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
-p {
-    position: absolute;
-    color: rgb(8, 0, 223);
-    top: 60%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 900;
+/* Animations */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .stylish-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .message {
+        font-size: 1.5rem;
+    }
+
+    .tag {
+        padding: 10px 20px;
+    }
+
+    .tag a {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    .message {
+        font-size: 1.2rem;
+    }
 }

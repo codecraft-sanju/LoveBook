@@ -4,18 +4,42 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>book for my girlfriend💕</title>
+    <title>Book for My Girlfriend 💕</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
     <div class="container">
-        <p> my girlfriend❤️ Please click on this i"ve maid something to make you feel special👆</p>
-        <div class="ribbon"></div>
-        <div class="tag">
-            <a href="book.html">girlfriend</a>
+        <div class="content">
+            <img src="shubhi.jpg" alt="Shubhi's Picture" class="stylish-image" />
+            <p class="message">
+                My girlfriend ❤️ <br />
+                I've made something special just for you! <br />
+                Please click below 👇
+            </p>
+            <div class="tag">
+                <a href="book.html">Girlfriend</a>
+            </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script>
+        
+            document.querySelector('.tag a').addEventListener('click', function (e) {
+                e.preventDefault();
+                confetti({
+                    particleCount: 120,
+                    spread: 70,
+                    origin: { y: 0.6 },
+                });
+                setTimeout(() => {
+                    window.location.href = 'book.html';
+                }, 1000);
+            });
+
+    </script>
 </body>
 
 </html>
